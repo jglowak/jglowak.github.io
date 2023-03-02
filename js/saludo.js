@@ -1,20 +1,14 @@
-function mostrarMensaje() {
+// Obtener la hora actual
+var hora = new Date().getHours();
 
-    const fecha = new Date(); 
-    const hora = fecha.getHours(); 
+// Obtener el elemento del DOM con id="saludo"
+var saludoElement = document.getElementById("saludo");
 
-    if(hora >= 5 && hora < 12) {
-        Buenas = "Buenos Días"; 
-        
-    } else if (hora >= 12 && hora < 19) {
-        Buenas = "Buenas Tardes";
-        
-    } else if (hora >= 19 && hora < 5) {
-        Buenas = "Buenas Noches";
-        
-    } 
-
-    
-    document.getElementById("txtsaludo").innerHTML = Buenas; 
-
+// Verificar la hora actual y cambiar el texto según corresponda
+if (hora >= 5 && hora < 12) {
+  saludoElement.textContent = "Buenos días";
+} else if (hora >= 12 && hora < 19) {
+  saludoElement.textContent = "Buenas tardes";
+} else {
+  saludoElement.textContent = "Buenas noches";
 }
