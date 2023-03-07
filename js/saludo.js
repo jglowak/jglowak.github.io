@@ -12,3 +12,6 @@ if (hora >= 5 && hora < 12) {
 } else {
   saludoElement.textContent = "Buenas noches";
 }
+
+
+document.getElementById("copyright-year").innerHTML = new Date().getFullYear();
